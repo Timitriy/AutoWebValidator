@@ -1,4 +1,4 @@
-package authorization;
+package authorization.validCases;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.Select;
 
-public class AuthorizationFormTest {
+public class AuthorizationAndFormFillingTest {
     private WebDriver driver;
     private final String URL = "file:///Users/dmitrijsorokin/Desktop/qa-test.html";
 
