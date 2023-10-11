@@ -19,25 +19,17 @@ public class RegistrationFormWithEmptyName {
         driver = new ChromeDriver();
         driver.get(URL);
     }
-
     @AfterClass
     public void tearDown() {driver.quit();}
-
     @Test
     public void testAuthorization() throws InterruptedException {
-        // Имитируем задержку, чтобы страница успела полностью загрузиться
-        Thread.sleep(1000);
 
-        // Вводим данные в поле Email и пароль
         driver.findElement(By.id("loginEmail")).sendKeys("test@protei.ru");
         Thread.sleep(1000);
         driver.findElement(By.id("loginPassword")).sendKeys("test");
         Thread.sleep(1000);
-
-        // Нажимаем на кнопку Вход
         driver.findElement(By.id("authButton")).click();
 
-        // Вводим данные в поля email и name
         Thread.sleep(1000);
         driver.findElement(By.id("dataEmail")).sendKeys("test@protei.ru");
         Thread.sleep(1000);
@@ -49,8 +41,7 @@ public class RegistrationFormWithEmptyName {
         checkbox.click();
         Thread.sleep(1000);
         radioButton.click();
-
-        // Выбор Мужской пол
+        
         WebElement genderDropdownElement = driver.findElement(By.id("dataGender"));
         Select genderDropdown = new Select(genderDropdownElement);
 
